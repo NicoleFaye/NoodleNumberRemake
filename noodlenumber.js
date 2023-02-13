@@ -1,17 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("optionalSettingsToggle").addEventListener("click", toggleOptionalSettings);
     document.getElementById("submitButton").addEventListener("click", calculateNoodleNumber);
 });
 
-function toggleOptionalSettings() {
-    document.getElementById("optionalSettings").style.display = 
-        document.getElementById("optionalSettings").style.display === "none" ? "block" : "none";
-}
+
+let noodleDiameter=0.07;
 
 function calculateNoodleNumber() {
     let length = document.getElementById("lengthInput").value;
     let circumference = document.getElementById("circumferenceInput").value;
-    let diameter = document.getElementById("diameterInput").value;
+    let diameter = noodleDiameter;
     let errorMessage = "";
     let outputLength = 0;
     let noodleRadius = 0;
