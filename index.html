@@ -1,73 +1,97 @@
 <head>
-    <link rel="stylesheet" type="text/css" href="noodlenumber.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <script src="noodlenumber.js"></script>
+    <link rel="stylesheet" type="text/css" href="noodlenumber.css">
 </head>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to the Noodle Number Calculator!</h1>
-    <br />
-    <h3 class="text-muted">Please enter your measurements in inches to see your noodle number</h5>
-    <br />
-    <form method="post" id="noodleForm">
-        <div class="form-group">
-            <div class="form-row">
-                <div class="col-6">
-                    <label for="length">Length:</label>
-                    <input type="number" step="0.001" name="length" id="lengthInput" class="form-control"/>
+<div class="container">
+    <div class="text-center">
+        <h1 class="display-4">Welcome to the Noodle Number Calculator!</h1>
+        <br />
+        <h3 class="text-muted">Please enter your measurements in inches to see your noodle number</h3>
+        <br />
+        <form method="post" id="noodleForm">
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-6">
+                        <label for="length">Length:</label>
+                        <input type="number" step="0.001" name="length" id="lengthInput" class="form-control" />
+                    </div>
+                    <div class="col-6">
+                        <label for="circumference">Circumference:</label>
+                        <input type="number" step="0.001" name="circumference" id="circumferenceInput"
+                            class="form-control" />
+                    </div>
                 </div>
-                <div class="col-6">
-                    <label for="circumference">Circumference:</label>
-                    <input type="number" step="0.001" name="circumference" id="circumferenceInput" class="form-control"/>
+                <div class="form-group mt-3">
+                    <input type="button" name="submit" value="Submit" id="submitButton" class="btn btn-primary" />
                 </div>
             </div>
-            <div class="form-group mt-3">
-                <input type="button" name="submit" value="Submit" id="submitButton" class="btn btn-primary"/>
-            </div>
-        </div>
-    </form>
-    <div id="resultContainer" style="display:none">
-        <h1 id="result" class="display-4"></h1>
-    </div>
-    <div id="errorContainer" style="display:none">
-        <h3 id="errorMessage" class="text-danger"></h3>
-    </div>
-</div>
+        </form>
 
-<div class="text-center mt-5">
-    <h1>What is a Noodle Number?</h1>
-    <p class="text-muted">
-        A Noodle Number is how long a penis would be if instead of having the girth that it does, it had the girth of a dry spaghetti noodle, but with the same volume!
-    </p>
-    <h1 class="mt-5">How do you calculate a Noodle Number?</h1>
-    <p class="text-muted">
-        Great question! For simplicity, we treat the penis as if it was a perfect cylinder. Treating it this way comes from the idea that the sides of the head are girthier than the shaft in some places, so if we take that extra volume and put it around the cone shape near the tip, it kinda evens out and its basically a cylinder right? We think so and thats what matters.
-    </p>
-    <p>
-        With that assumption we are able to easily calculate what we want:
-    </p>
-    <div class="d-flex justify-content-center">
-        <code class="mx-3">
-            Volume=π*Radius<sup>2</sup>*PenisLength
-            <br />
-            Radius=Circumference/(2π)
-            <br />
-            Volume=π*(Circumference/(2π))<sup>2</sup>*PenisLength
-        </code>
+
+        <div id="resultContainer" style="display:none">
+            <h1 id="result" class="display-4"></h1>
+        </div>
+        <div id="errorContainer" style="display:none">
+            <h3 id="errorMessage" class="text-danger"></h3>
+        </div>
     </div>
-    <p>
-        From here we have the volume of the of penis we are measuring, next we need to use that volume to find the length that penis would be with the girth of an uncooked spaghetti noodle. The dimension that was measured on the spaghetti noodle was its diameter. The value in the calculator will default to .07, which is the diameter of a spaghetti noodle in inches measured with digital calipers. In our next formula we replace the radius variable from the original volume formula with .035, or half of the measured diameter:
-    </p>
-    <div class="d-flex justify-content-center">
-        <code class="mx-3">
-            NoodleLength=Volume/(π*Radius<sup>2</sup>) => NoodleLength=Volume/(π*(0.035)<sup>2</sup>)
-        </code>
-    </div>
-    <p>
-        Making this our final formula:
-    </p>
-    <div class="d-flex justify-content-center">
-        <code class="mx-3">
-            NoodleLength=(π*(Circumference/(2π))<sup>2</sup>*PenisLength)/(π*(0.035)<sup>2</sup>)
-        </code>
+
+    <div class="text-center mt-5">
+        <h1>What is a Noodle Number?</h1>
+        <p class="text-muted">
+            A Noodle Number is how long a penis would be if instead of having the girth that it does, it had the girth
+            of a dry spaghetti noodle, but with the same volume!
+        </p>
+        <h1 class="mt-5">How do you calculate a Noodle Number?</h1>
+        <p class="text-muted">
+            Great question! For simplicity, we treat the penis as if it was a perfect cylinder. Treating it this way
+            comes from the idea that the sides of the head are girthier than the shaft in some places, so if we take
+            that extra volume and put it around the cone shape near the tip, it kinda evens out and its basically a
+            cylinder right? We think so and thats what matters.
+        </p>
+        <p>
+            With that assumption we are able to easily calculate what we want:
+        </p>
+        <div class="d-flex justify-content-center">
+            <code class="mx-3">
+                Volume=π*Radius<sup>2</sup>*PenisLength
+                <br />
+                Radius=Circumference/(2π)
+                <br />
+                Volume=π*(Circumference/(2π))<sup>2</sup>*PenisLength
+            </code>
+        </div>
+        <p>
+            From here we have the volume of the of penis we are measuring, next we need to use that volume to find the
+            length that penis would be with the girth of an uncooked spaghetti noodle. The dimension that was measured
+            on the spaghetti noodle was its diameter. The value in the calculator will default to .07, which is the
+            diameter of a spaghetti noodle in inches measured with digital calipers. In our next formula we replace the
+            radius variable from the original volume formula with .035, or half of the measured diameter:
+        </p>
+        <div class="d-flex justify-content-center">
+            <code class="mx-3">
+                NoodleLength=Volume/(π*Radius<sup>2</sup>) => NoodleLength=Volume/(π*(0.035)<sup>2</sup>)
+            </code>
+        </div>
+        <p>
+            Making this our final formula:
+        </p>
+        <div class="d-flex justify-content-center">
+            <code class="mx-3">
+                NoodleLength=(π*(Circumference/(2π))<sup>2</sup>*PenisLength)/(π*(0.035)<sup>2</sup>)
+            </code>
+        </div>
     </div>
 </div>
