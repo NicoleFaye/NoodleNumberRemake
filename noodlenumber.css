@@ -10,10 +10,12 @@ body {
 font-family: Arial, sans-serif;
 background-color: rgb(38, 42, 43);
 color: rgb(232, 230, 227);
-max-width: 1200px;
-margin: 0 auto;
 padding: 20px;
+max-width: 1400px;
+margin: 0 auto;
+width: 100%;
 }
+
 
 .text-center {
 text-align: center;
