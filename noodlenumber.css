@@ -1,3 +1,5 @@
+/* Please dont judge my css, I used AI to make it */
+
 html {
 	background-color: #181a1b ;
 }
@@ -58,15 +60,6 @@ font-weight: bold;
 margin-right: 10px;
 }
 
-#optionalSettingsToggle {
-display: inline-block;
-margin-left: 20px;
-vertical-align: middle;
-}
-
-#optionalSettings {
-margin-top: 20px;
-}
 
 #submitButton {
 background-color: #4CAF50;
