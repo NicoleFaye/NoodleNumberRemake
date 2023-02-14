@@ -112,3 +112,10 @@ color: rgb(232,230,227);
 .text-muted {
   color: rgb(158, 150, 137) !important;
 }
+
+#logo {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+}
