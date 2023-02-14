@@ -39,7 +39,6 @@ color: rgb(232, 230, 227);
 background-color: rgb(38, 42, 43);
 width: 150px;
 padding: 10px;
-font-size: 16px;
 border-radius: 5px;
 border: 1px solid rgb(48,52,54);
 margin-bottom: 20px;
@@ -74,7 +73,6 @@ padding: 10px 20px;
 border-radius: 5px;
 border: none;
 cursor: pointer;
-font-size: 16px;
 }
 
 #resultContainer {
@@ -83,7 +81,6 @@ margin-top: 30px;
 
 #result {
 color: #4CAF50;
-font-size: 36px;
 }
 
 #errorContainer {
@@ -93,12 +90,10 @@ color: #f44336;
 
 h1 {
 color: rgb(232,230,227);
-font-size: 36px;
 margin-top: 40px;
 }
 
 p {
-font-size: 16px;
 line-height: 1.5;
 color: rgb(232,230,227);
 margin-top: 20px;
@@ -107,7 +102,6 @@ margin-top: 20px;
 code {
 background-color: #444;
 padding: 5px 10px;
-font-size: 14px;
 border-radius: 5px;
 display: block;
 margin-top: 20px;
