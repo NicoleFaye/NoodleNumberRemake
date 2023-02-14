@@ -114,8 +114,8 @@ color: rgb(232,230,227);
 }
 
 #logo {
-  width: 100px;
-  height: 100px;
+  width: calc(582px *.25);
+  height: calc(763px*.25);
   display: block;
   margin: 0 auto;
 }
