@@ -10,6 +10,7 @@ body {
 font-family: Arial, sans-serif;
 background-color: rgb(38, 42, 43);
 color: rgb(232, 230, 227);
+max-width: 700px;
 margin: 0 auto;
 padding: 20px;
 }
@@ -24,6 +25,8 @@ color: rgb(232,230,227);
 }
 
 form {
+width: 100%;
+max-width: 500px;
 margin: 0 auto;
 padding: 30px;
 border-radius: 10px;
